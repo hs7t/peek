@@ -25,16 +25,16 @@ jobs:
         if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
           mv dist/peek.exe dist/peek-windows-x86_64.exe
         elif [[ "${{ matrix.os }}" == "windows-11-arm" ]]; then
-          mv dist/peek.exe dist/peek-windows-arm64
+          mv dist/peek.exe dist/peek-windows-arm64.exe
         elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
           mv dist/peek dist/peek-macos-arm64
         elif [[ "${{ matrix.os }}" == "macos-13" ]]; then
           mv dist/peek dist/peek-macos-x86_64
         elif [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
           mv dist/peek dist/peek-linux-x86_64
-        elif [[ "${{ matrix.os }}" == "ubuntu-24.04-arm" ]]
+        elif [[ "${{ matrix.os }}" == "ubuntu-24.04-arm" ]]; then
           mv dist/peek dist/peek-linux-arm64
-
+        fi
       shell: bash
     
     - name: Upload artifacts
