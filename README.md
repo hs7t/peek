@@ -6,6 +6,7 @@ Peek is a tiny CLI tool that quickly gives you a preview of all human-readable
 text files in a directory. It features:
 - smart file detection and support for most non-binary files, even those without file extensions
 or in obscure formats
+- little to no setup and a small, self-contained package
 - nice code previews with syntax highlighting 
 - fuzzy, case-insensitive search and glob pattern-based filtering
 - multiple sorting options
