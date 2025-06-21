@@ -3,9 +3,9 @@
 ![A terminal screenshot of peek](https://i.imgur.com/YA5YSOk.png)
 
 Peek is a tiny CLI tool that quickly gives you a preview of all human-readable
-text files in a directory. It features:
-- smart file detection and support for most non-binary files, even those without file extensions
-or in obscure formats
+text files in a directory. Features:
+- smart file detection and support for most non-binary files, even those in obscure formats or 
+without a file extension 
 - little to no setup and a small, self-contained package
 - nice code previews with syntax highlighting 
 - fuzzy, case-insensitive search and glob pattern-based filtering
