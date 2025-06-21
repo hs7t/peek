@@ -1,6 +1,6 @@
 ﻿# peek!
 
-![A terminal screenshot of peek](https://i.imgur.com/YA5YSOk.png)
+![A terminal screenshot of peek](https://imgur.com/22Dtq9h.png)
 
 Peek is a tiny CLI tool that quickly gives you a preview of all human-readable
 text files in a directory. Features:
