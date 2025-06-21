@@ -7,7 +7,7 @@ text files in a directory. Features:
 - smart file detection and support for most non-binary files, even those in obscure formats or 
 without a file extension 
 - little to no setup and a small, self-contained package
-- nice code previews with syntax highlighting 
+- syntax-highlighted previews for code, markup and more 
 - fuzzy, case-insensitive search and glob pattern-based filtering
 - multiple sorting options
 - support for multiple platforms
