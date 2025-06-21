@@ -13,7 +13,7 @@ without a file extension
 - support for multiple platforms
 
 
-# Installation
+# Getting peek
 
 ## Downloading a binary
 
