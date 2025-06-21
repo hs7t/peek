@@ -178,6 +178,11 @@ fuzzy string matching
 - [charset-normalizer](https://github.com/jawah/charset_normalizer), a universal character
 encoding library
 
+## Misc
+- [@sindresorhus](https://github.com/sindresorhus/)'s 
+[text-extensions](https://github.com/sindresorhus/text-extensions) and
+ [binary-extensions](https://github.com/sindresorhus/binary-extensions)
+
 ## LLMs
 LLMs (Claude Sonnet 4, GPT-4o, and GPT 4.1) were used for research, tooling setup
 and debugging during development. This included library and architecture suggestions
