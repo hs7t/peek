@@ -20,9 +20,9 @@ without a file extension
 Grab yourself a binary from the [Releases](https://github.com/hs7t/peek/releases/) 
 tab. There's three available:
 
-- for Windows: `peek-windows.exe`
-- for macOS: `peek-macos`
-- for Linux: `peek-linux`
+- for Windows (x86-64): `peek-windows.exe`
+- for macOS (arm64): `peek-macos`
+- for Linux (x86-64): `peek-linux`
 
 ### Linux and Mac
 
