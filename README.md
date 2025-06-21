@@ -18,7 +18,7 @@ without a file extension
 ## Downloading a binary
 
 Grab yourself a binary from the [Releases](https://github.com/hs7t/peek/releases/) 
-tab. There's three available:
+tab. They're available for three platforms:
 
 - for Windows: `peek-windows-[x86_64 or arm64].exe`
 - for macOS: `peek-macos-[arm64 or x86_64]`
