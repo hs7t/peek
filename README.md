@@ -157,7 +157,7 @@ peek --low-accuracy
 ```
 ### Debugging
 If you want to troubleshoot peek, you can enable debug mode, which
-shows you more information when errors ocurr:
+shows you more information when errors occur:
 
 ```bash
 peek -db
