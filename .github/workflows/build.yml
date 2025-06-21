@@ -57,7 +57,10 @@ jobs:
       with:
         files: |
           binary-ubuntu-latest/*
+          binary-ubuntu-24.04-arm/*
           binary-windows-latest/*
+          binary-windows-11-arm/*
           binary-macos-latest/*
+          binary-macos-13/*
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
