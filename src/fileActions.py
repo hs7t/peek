@@ -28,14 +28,16 @@ def fetchMatchingFiles(paths, query = "", precision_ratio=70, binary_filter_accu
     """
     results = []
     for path in paths:
-
         if query != "":
             match_ratio = fuzz.ratio(query.lower(), path.name.lower())
         else:
-            match_ratio = 100
+            match_ratio =  100
+            
+        if match_ratio <= precision_ratio:
+            continue
 
-        if (match_ratio >= precision_ratio) and not (isBinary(readChunk(path, max_bytes=1024), path.name, accuracy=binary_filter_accuracy)):
-            chunk = readChunk(path)
+        if not (isBinary(readChunk(path, max_bytes=512), path, accuracy=binary_filter_accuracy)):
+            chunk = readChunk(path, max_bytes=max_file_bytes)
 
             results.append({
                 "path": path,

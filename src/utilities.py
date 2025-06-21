@@ -1,3 +1,5 @@
+from referenceVariables import BINARY_FILE_EXTENSIONS, TEXT_FILE_EXTENSIONS
+
 from charset_normalizer import from_bytes, is_binary
 from pygments.lexers import get_lexer_for_filename
 from pygments.util import ClassNotFound
@@ -34,6 +36,7 @@ def readChunk(path, max_bytes: int=8192):
         return b''
 
 def stringChunk(chunk):
+    # never had an issue happen but just in case yk
     try:
         string = str(from_bytes(chunk).best())
         if not string:
@@ -42,12 +45,18 @@ def stringChunk(chunk):
     except Exception:
         return "[Binary or unreadable file]"
 
-def isBinary(chunk, filename: str, accuracy: str = "high"):
+def isBinary(chunk, path, accuracy: str = "high"):
+    filename = path.name
+    file_extension = path.suffix.lower().lstrip('.')
+
+    if file_extension in BINARY_FILE_EXTENSIONS:
+        return True
+    if file_extension in TEXT_FILE_EXTENSIONS:
+        return False
+    
     if accuracy == "high":
         if (getLanguageForFilename(filename, false_return="_fail") != "_fail"):
             return False
         else: return is_binary(chunk)
-    elif accuracy == "low":
-        if (getLanguageForFilename(filename, false_return="_fail") != "_fail"):
-            return False
-        else: return True
+    
+    return True
