@@ -1,6 +1,5 @@
-from utilities import readChunk
+from utilities import readChunk, isBinary
 from thefuzz import fuzz
-from charset_normalizer import is_binary
 
 def listTextFiles(directory, pattern="*", sorting="recency"):
     """
@@ -22,21 +21,22 @@ def listTextFiles(directory, pattern="*", sorting="recency"):
         
     return results
 
-def fetchMatchingFiles(paths, query = "", precision_ratio=70, max_file_bytes=8192):
+def fetchMatchingFiles(paths, query = "", precision_ratio=70, binary_filter_accuracy="high", max_file_bytes=4096):
     """
     Fuzzy-match a query (str), if existent, to the filenames of each path, returning
     all paths that can pass with a given precision ratio (default 70)
     """
     results = []
     for path in paths:
-        chunk = readChunk(path)
 
         if query != "":
             match_ratio = fuzz.ratio(query.lower(), path.name.lower())
         else:
             match_ratio = 100
 
-        if (match_ratio >= precision_ratio) and not (is_binary(chunk)):
+        if (match_ratio >= precision_ratio) and not (isBinary(readChunk(path, max_bytes=1024), path.name, accuracy=binary_filter_accuracy)):
+            chunk = readChunk(path)
+
             results.append({
                 "path": path,
                 "chunk": chunk
