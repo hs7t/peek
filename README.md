@@ -58,7 +58,9 @@ do so, follow these steps:
         ```powershell
         [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\path\to\folder", "User")
         ```
-
+> [!TIP]
+> You should rename the binary to `peek` (or `peek.exe` on Windows)
+  if you want to use it by just typing `peek`.
 # Usage
 
 ## Basic usage
