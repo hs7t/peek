@@ -28,10 +28,10 @@ def peek(
 
     workingDir = Path(directory).resolve()
     if not workingDir.exists():
-        closeWithError(f"It seems the directory '{dir}' does not exist.", 1)
+        closeWithError(f"It seems the directory '{directory}' does not exist.", 1)
         return
     if not workingDir.is_dir():
-        closeWithError(f"The path '{dir}' is not a directory.")
+        closeWithError(f"The path '{directory}' is not a directory.")
         return
     
     if high_accuracy == True:
