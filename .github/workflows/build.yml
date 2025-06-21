@@ -25,3 +25,20 @@ jobs:
       with:
         name: binary-${{ matrix.os }}
         path: dist/
+    - name: Rename binaries
+      run: |
+        if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
+          mv dist/peek.exe dist/peek-windows.exe
+        elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
+          mv dist/peek dist/peek-macos
+        else
+          mv dist/peek dist/peek-linux
+        fi
+      shell: bash
+    
+    - name: Upload to Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
