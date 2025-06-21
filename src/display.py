@@ -9,7 +9,7 @@ def syntaxHighlight(string, filename, show_line_numbers=False):
     return highlightedStr
 
 def printFilePreviewTable(files, console, file_max_lines=4, show_line_numbers=False, syntax_highlighting=True):
-    table = Table(show_header=True, header_style="green", box=box.ROUNDED)
+    table = Table(show_header=True, header_style="yellow", box=box.ROUNDED)
     separator = "[dim]" + "·" * 3 + "[/dim]\n"
 
     table.add_column("File")
