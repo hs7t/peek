@@ -1,0 +1,27 @@
+name: Build binaries
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13.5'
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install pyinstaller
+    - name: Build binary
+      run: pyinstaller --onefile ${{ github.workspace }}/src/peek.py
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: binary-${{ matrix.os }}
+        path: dist/
