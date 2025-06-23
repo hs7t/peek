@@ -11,7 +11,7 @@ def listTextFiles(directory, pattern="*", sorting="recency"):
     for p in directory.iterdir():
         if pattern == "*" and p.is_file():
             results.append(p)
-        if p.glob(pattern) and p.is_file():
+        elif p.glob(pattern) and p.is_file():
             results.append(p)
 
     if sorting == "recency":

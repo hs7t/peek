@@ -9,7 +9,7 @@ from display import printFilePreviewTable
 
 
 console = Console()
-app = typer.Typer()
+app = typer.Typer(add_completion=False)
 debugMode = False
 
 @app.command()
