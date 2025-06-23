@@ -9,7 +9,9 @@ def listTextFiles(directory, pattern="*", sorting="recency"):
 
     results = []
     for p in directory.iterdir():
-        if p.match(pattern) and p.is_file():
+        if pattern == "*" and p.is_file():
+            results.append(p)
+        if p.glob(pattern) and p.is_file():
             results.append(p)
 
     if sorting == "recency":
