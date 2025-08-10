@@ -12,6 +12,8 @@ without a file extension
 - multiple sorting options
 - support for multiple platforms
 
+> [!TIP]
+> This project is a *command line app*. It should be run from your terminal emulator of choice, not by opening the binary from a file manager!
 
 # Getting peek
 
