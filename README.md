@@ -2,7 +2,7 @@
 
 ![A terminal screenshot of peek](https://imgur.com/22Dtq9h.png)
 
-Peek is a tiny CLI tool that quickly gives you a preview of all human-readable
+`peek` is a tiny CLI tool that quickly gives you a preview of all human-readable
 text files in a directory. Features:
 - smart file detection and support for most non-binary files, even those in obscure formats or 
 without a file extension 
@@ -13,7 +13,7 @@ without a file extension
 - support for multiple platforms
 
 > [!TIP]
-> This project is a *command line app*. It should be run from your terminal emulator of choice, not by opening the binary from a file manager!
+> This is a command line tool. Run it from your terminal thingamajig of choice!
 
 # Getting peek
 
@@ -27,7 +27,7 @@ tab. They're available for three platforms:
 - for Linux (x86-64 / arm64): `peek-linux-[x86_64 or arm64]`
 
 > [!TIP]
-> Don't know what x86_64 or arm64 mean? If you're running Windows or Linux, your
+> Unsure what to pick? If you're running Windows or Linux, your
   device is most likely to work with the x86_64 binary. If you're on an Apple Silicon 
   (M1, M2, M3...) Mac, choose the arm64 binary.
 
@@ -63,10 +63,10 @@ do so, follow these steps:
 > [!TIP]
 > You should rename the binary to `peek` (or `peek.exe` on Windows)
   if you want to use it by just typing `peek`.
+
 # Usage
 
-## Basic usage
-
+## Peeking
 Run peek in any directory to see a preview of all text files:
 
 ```bash
@@ -174,6 +174,7 @@ peek --debug-mode
 ```
 # Contributing
 Found a bug? Want a new feature? Open an issue through the [Issues](https://github.com/hs7t/peek/issues) tab.
+Pull requests are very much welcome!
 
 # Credits
 
